@@ -161,6 +161,6 @@ cython_debug/
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
 
-# # Ignore wandb logs and checkpoints
+# Ignore wandb logs and checkpoints
 wandb/
 checkpoints/
