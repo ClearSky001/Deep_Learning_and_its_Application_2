@@ -4,7 +4,7 @@ import torch
 from lab_04_resnet import IdentityBlock, ConvBlock, ResNet50, get_model
 #from torchvision import models
 
-def test_IdentityBlock_score_25():
+def test_IdentityBlock_score_2():
     torch.manual_seed(0)  # For reproducibility
     input_tensor = torch.rand(1, 256, 56, 56)  # Example input (batch_size, channels, height, width)
     
@@ -46,7 +46,7 @@ def test_IdentityBlock_score_25():
     assert sum(p.numel() for p in block.parameters()) == 3479552, "IdentityBlock parameter number does not match"
     
 
-def test_ConvBlock_score_25():
+def test_ConvBlock_score_3():
     torch.manual_seed(0)  # For reproducibility
     input_tensor = torch.rand(1, 256, 56, 56)  # Example input (batch_size, channels, height, width)
     
@@ -78,7 +78,7 @@ def test_ConvBlock_score_25():
     assert sum(p.numel() for p in block.parameters()) == 1184768, "ConvBlock parameter number does not match"
 
 
-def test_ResNet50_score_25():
+def test_ResNet50_score_3():
     torch.manual_seed(0)  # For reproducibility
     input_tensor = torch.rand(1, 3, 64, 64)  # Example input (batch_size, channels, height, width)
     
@@ -105,7 +105,7 @@ def test_ResNet50_score_25():
     assert sum(p.numel() for p in model.parameters()) == 23528522, "ResNet50 parameter number does not match"
 
 
-def test_transfer_learning_score_25():
+def test_transfer_learning_score_2():
     torch.manual_seed(0)  # For reproducibility
     input_tensor = torch.rand(1, 3, 64, 64)  # Example input (batch_size, channels, height, width)
 
